@@ -1,0 +1,30 @@
+.departamento {
+    stroke:brown;
+    stroke-width: 3px;
+    fill: grey;
+    fill-opacity: 1;
+  }
+  
+  .municipio {
+    stroke: lightblue;
+    stroke-opacity: .7;
+    fill: azure;
+    fill-opacity: 0;
+  }
+  
+  .municipio:hover {
+    fill-opacity: .7;
+  }
+  
+  div.tooltip {   
+    position: absolute;           
+    text-align: center;           
+    padding: 2px;             
+    font-family:  Tahoma, Arial, sans-serif;     
+    font-size: 14px;   
+    background: white;   
+    border: 0px;  
+    border-radius: 4px;           
+    pointer-events: none;
+    opacity: 0;         
+  }
