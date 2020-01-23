@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as d3 from 'd3';
 import * as topojson from 'topojson';
 import "./Map.css";
-import ni from 'geodata/ni.json';
+import ni from 'geodata/ni20.json';
 class Map extends Component {
   render() {
     const ni_proj = d3.geoMercator();

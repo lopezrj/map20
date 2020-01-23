@@ -1,14 +1,14 @@
 .departamento {
-    stroke:brown;
+    stroke: gray;
     stroke-width: 3px;
-    fill: grey;
+    fill: #FEF9E7;
     fill-opacity: 1;
   }
   
   .municipio {
-    stroke: lightblue;
+    stroke: gray;
     stroke-opacity: .7;
-    fill: azure;
+    fill: blue;
     fill-opacity: 0;
   }
   
