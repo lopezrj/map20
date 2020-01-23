@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import './Sidebar.css';
 
 export class Sidebar extends Component {
@@ -6,7 +8,8 @@ export class Sidebar extends Component {
     return (
       <div className="App-sidebar">
         <ul>
-          <li>Mapa</li>
+          <li><Link to='/'>Mapa</Link></li>
+          <li><Link to='/about'>About</Link></li>
           <li>Other</li>
           <li>Other</li>
           <li>Other</li>
