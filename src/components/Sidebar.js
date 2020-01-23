@@ -8,8 +8,8 @@ export class Sidebar extends Component {
     return (
       <div className="App-sidebar">
         <ul>
-          <li><Link to='/'>Mapa</Link></li>
-          <li><Link to='/about'>About</Link></li>
+          <Link to='/'><li>Mapa</li></Link>
+          <Link to='/about'><li>About</li></Link>
           <li>Other</li>
           <li>Other</li>
           <li>Other</li>
