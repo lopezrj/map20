@@ -29,12 +29,6 @@
   flex-direction: row;
 }
 
-.App-sidebar {
-  background-color: powderblue;
-  min-height: 95vh;
-  width: 10vw;
-}
-
 .App-link {
   color: #61dafb;
 }
