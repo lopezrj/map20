@@ -5,6 +5,7 @@ import Header from 'components/Header';
 import Sidebar from 'components/Sidebar';
 import Map from 'components/Map';
 import About from 'components/About';
+import Asegurados from 'components/Asegurados';
 import Error from 'components/Error';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Sidebar></Sidebar>
         <Switch>
           <Route path="/" component={Map} exact />
+          <Route path="/asegurados" component={Asegurados} />
           <Route path="/about" component={About} />
           <Route component={Error} />  
         </Switch>

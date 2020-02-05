@@ -9,6 +9,7 @@ export class Sidebar extends Component {
       <div className="App-sidebar">
         <ul>
           <Link to='/'><li>Mapa</li></Link>
+          <Link to='/asegurados'><li>Asegurados</li></Link>
           <Link to='/about'><li>About</li></Link>
           <li>Other</li>
           <li>Other</li>

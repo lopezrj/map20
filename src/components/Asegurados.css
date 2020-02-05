@@ -1,0 +1,120 @@
+  path {
+    fill: none;
+    stroke: #000;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .land {
+    fill: #F7f7f7;
+    stroke: #ccc;
+  }
+
+  .border {
+    fill: none;
+    stroke: #bbb;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+
+circle.gain{
+  fill: #67a9cf;
+  stroke: #fff;
+}
+circle.loss{
+  fill: #ef8a62;
+  stroke: #fff;
+}
+
+circle:hover{
+  stroke: blue;
+  stroke-width: 1.5;
+}
+ 
+  .bubble {
+    fill: steelblue;
+    fill-opacity: .45;
+    stroke: blue;
+    stroke-width: .5px;
+}
+
+
+.legend circle {
+  fill: none;
+  stroke: #ccc;
+}
+
+.legend text {
+  fill: #777;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+
+#scout{
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  font-size: 12px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+}
+
+#scout strong{
+  font-size: 16px;
+}
+
+#scout span{
+  color: #999;
+}
+
+#date, #play, #slider-container{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px;
+}
+
+#date{
+  border-left: 5px solid #ccc;
+  padding: 3px 0 3px 10px;
+  margin-left: 60px;
+  color: #333;
+}
+#date p{
+  margin: 0;
+}
+
+#date p:first-child{
+  color: #999;
+  font-size: 11px;
+  line-height: 13px;
+}
+#date p#month{
+  font-size: 30px;
+  line-height: 30px;
+}
+#date p#month span{
+  float: left;
+  width: 2.55em;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+
