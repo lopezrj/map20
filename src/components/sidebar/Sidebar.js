@@ -3,18 +3,20 @@ import { Link } from 'react-router-dom';
 
 import './Sidebar.css';
 
+function Button(props) {
+  return (
+    <Link to={props.to}><li>{props.text}</li></Link>
+  )
+}
+
 export class Sidebar extends Component {
   render() {
     return (
       <div className="App-sidebar">
         <ul>
-          <Link to='/'><li>Mapa</li></Link>
-          <Link to='/asegurados'><li>Asegurados</li></Link>
-          <Link to='/about'><li>About</li></Link>
-          <li>Other</li>
-          <li>Other</li>
-          <li>Other</li>
-          <li>Other</li>
+          <Button to='/' text="Mapa" />
+          <Button to='/asegurados' text="Asegurados" />
+          <Button to='/about' text="About" />
         </ul>
       </div>
     )

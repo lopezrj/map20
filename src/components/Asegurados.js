@@ -7,12 +7,11 @@ import datafile from "data/asegurados.tsv";
 import Departamentos from "components/Departamentos";
 
 const ni_proj = d3.geoMercator();
-const pathGenerator = d3.geoPath().projection(ni_proj);
-
-const r = d3.scaleSqrt();
-
 ni_proj.scale(900 * 10)
   .center([-85,13.65]);
+
+const pathGenerator = d3.geoPath().projection(ni_proj);
+const r = d3.scaleSqrt();
   
 class Municipios extends Component {
   render () {
@@ -32,18 +31,14 @@ function scout(status) {
 
 }
 
-class Circles extends Component {
-    render() {  
-      const circles = topojson.feature(ni, ni.objects.municipios).features
-    .sort(function(a,b) { return  this.props.data.get(b.properties.Munic_id) - this.props.data.get(a.properties.Munic_id)})
-    .map((d,i) => 
-      <circle key={i}
-        transform= {"translate(" + pathGenerator.centroid(d) + ")"}
-        r={r(this.props.data.get(d.properties.Munic_id)/100)}
-        onMouseEnter={() => {this.props.onHover(d)}} >
-        </circle>);
-  return (<g id="circles" className="bubble" >{circles}</g>);
-}
+function Circles(props) {
+    const circles = topojson.feature(ni, ni.objects.municipios).features
+      .sort(function(a,b) { return  props.data.get(b.properties.Munic_id) - props.data.get(a.properties.Munic_id)})
+      .map((d,i) => 
+        <circle key={i}
+          transform= {"translate(" + pathGenerator.centroid(d) + ")"}
+          r={r(props.data.get(d.properties.Munic_id)/100)} />);
+    return (<g id="circles" className="bubble" >{circles}</g>);
 } 
 
 
@@ -75,7 +70,7 @@ class Asegurados extends Component {
       <div id="map-container">
         <svg width="900" height="900" id="my-svg" viewBox="0 0 900 900" >
           <Departamentos scale="9000" center={[-85,13.65]} className="land" />
-          <Circles className="circle"  data={this.state.data} hoverElement={this.state.hover} onHover={this.onHover} />
+          <Circles className="circle"  data={this.state.data} hoverElement={this.state.hover} />
         </svg>
       </div>
     )

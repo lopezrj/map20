@@ -16,7 +16,7 @@
     fill-opacity: .7;
   }
   
-  div.tooltip {   
+  svg.tooltip {   
     position: absolute;           
     text-align: center;           
     padding: 2px;             

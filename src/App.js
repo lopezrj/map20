@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Header from 'components/Header';
-import Sidebar from 'components/Sidebar';
+import Sidebar from 'components/sidebar/Sidebar';
 import Map from 'components/Map';
 import About from 'components/About';
 import Asegurados from 'components/Asegurados';

@@ -19,7 +19,7 @@ class Map extends Component {
   return (
     <svg width="900" height="900" >
       <Departamentos scale="9000" center={[-85,13.65]} className="departamento" />
-      <g id="municipios">{municipios}</g>
+      <g id="municipios" className="tooltip">{municipios}</g>
     </svg>);
   }
 }
